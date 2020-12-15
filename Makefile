@@ -56,7 +56,7 @@ build-backend-cross-linux64:
 		cross-build \
 		go build -o dist/gpx_sqlite-datasource_linux_amd64 \
 		-ldflags '-w -s -extldflags "-static"' \
-		-tags osusergo,netgo,json1 \
+		-tags osusergo,netgo,sqlite_omit_load_extension \
 		./pkg
 
 build-backend-cross-linux-arm6:
